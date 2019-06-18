@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class ArrayPractice {
     public static void main(String[] args){
@@ -89,13 +90,18 @@ public class ArrayPractice {
          */
         System.out.println(" Given the following array: ['w','t','y','h','k']\n" +
                 "Loop through the array and replace the the letter 't' with the word \"hello\" once it's found.");
-        String[] string2 = {"w","t","y","h","k"};
+        char[] string2 = {'w','t','y','h','k'};
 
-        for(int i = 0; i < string2.length; i++){
-            if(string2[i] == "t"){
-                string2[i] = "Hello";
+        String line = new String(string2);
+
+        String[] string3 = line.split("");
+        System.out.println(Arrays.toString(string3));
+
+        for(int i = 0; i < string3.length; i++){
+            if(string3[i].equalsIgnoreCase("t")){
+                string3[i] = "Hello";
             }
-            System.out.println(string2[i]);
+            System.out.println(string3[i]);
         }
         /*
          Given array 1: [1,7,6,5,9] and array 2: [2,7,6,3,4]
